@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class CalculadoraPropinas {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Ingrese el total de la cuenta: ");
+        double totalCuenta = scanner.nextDouble();
+
+        System.out.print("Ingrese el porcentaje de propina: ");
+        double porcentajePropina = scanner.nextDouble();
+
+        double propina = totalCuenta * (porcentajePropina / 100);
+        double totalConPropina = totalCuenta + propina;
+
+        System.out.println("Propina: $" + propina);
+        System.out.println("Total a pagar: $" + totalConPropina);
+
+        scanner.close();
+    }
+}
