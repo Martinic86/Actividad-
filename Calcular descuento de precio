@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class CalcularDcto {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Ingresar precio del producto: ");
+        double precioOriginal = scanner.nextDouble();
+
+        System.out.print("Ingresa el porcentaje de descuento: ");
+        double descuento = scanner.nextDouble();
+
+        double precioFinal = calcularPrecioFinal(precioOriginal, descuento);
+        System.out.println("El precio final con descuento es: " + precioFinal);
+    }
+
+    public static double calcularPrecioFinal(double precioOriginal, double descuento) {
+        return precioOriginal - (precioOriginal * descuento / 100);
+    }
+}
